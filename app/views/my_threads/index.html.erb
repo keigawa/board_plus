@@ -1,0 +1,25 @@
+<h1>My Threads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_threads.each do |my_thread| %>
+      <tr>
+        <td><%= my_thread.title %></td>
+        <td><%= link_to 'Show', my_thread %></td>
+        <td><%= link_to 'Edit', edit_my_thread_path(my_thread) %></td>
+        <td><%= link_to 'Destroy', my_thread, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My Thread', new_my_thread_path %>
+

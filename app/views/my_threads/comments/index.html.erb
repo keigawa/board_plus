@@ -1,0 +1,24 @@
+<h1>Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comments</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.body %></td>
+        <td><%= link_to 'Edit', edit_my_thread_comment_path(my_thread_id: @my_thread, id: comment) %></td>
+        <td><%= link_to 'Destroy', my_thread_comment_path(my_thread_id: @my_thread, id: comment), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comment', new_my_thread_comment_path(my_thread_id: @my_thread) %>
+<%= link_to 'Back', my_thread_path(@my_thread) %>

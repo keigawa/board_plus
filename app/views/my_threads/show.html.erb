@@ -1,0 +1,8 @@
+<p>
+  Title:  <%= @my_thread.title %>
+</p>
+
+<%= link_to "Show Comment", my_thread_comments_path(my_thread_id: @my_thread) %>
+
+<%= link_to 'Edit', edit_my_thread_path(my_thread_id: @my_thread) %> 
+<%= link_to 'Back', my_threads_path %>
