@@ -1,6 +1,6 @@
 class MyThreads::CommentsController < ApplicationController
   before_action :set_my_thread 
-  before_action :set_comment_admin, only: [:update, :destroy]
+  before_action :set_comment_admin, only: [:edit, :update, :destroy]
 
   def index
     @comments=Comment.where(my_thread_id:params[:my_thread_id])
@@ -17,7 +17,6 @@ class MyThreads::CommentsController < ApplicationController
   end
 
   def edit
-    @comment=Comment.find(params[:id])
   end
 
   def update
