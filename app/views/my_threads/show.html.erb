@@ -4,5 +4,7 @@
 
 <%= link_to "Show Comment", my_thread_comments_path(my_thread_id: @my_thread) %>
 
+<% if @user_id_authentic==@current_user_id %>
 <%= link_to 'Edit', edit_my_thread_path(my_thread_id: @my_thread) %> 
+<% end %>
 <%= link_to 'Back', my_threads_path %>
