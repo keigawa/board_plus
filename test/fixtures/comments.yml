@@ -3,7 +3,9 @@
 one:
   body: MyString
   my_thread: one
+  user: one
 
 two:
   body: MyString
   my_thread: two
+  user: two

@@ -12,8 +12,10 @@
       <tr>
         <td><%= my_thread.title %></td>
         <td><%= link_to 'Show', my_thread %></td>
+        <% if my_thread.user_id == @current_user_id then %>
         <td><%= link_to 'Edit', edit_my_thread_path(my_thread) %></td>
         <td><%= link_to 'Destroy', my_thread, method: :delete %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

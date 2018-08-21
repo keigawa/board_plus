@@ -5,4 +5,6 @@ Rails.application.routes.draw do
       resources :comments
     end
   end
+  root to: "my_threads#index"
+  devise_for :users
 end

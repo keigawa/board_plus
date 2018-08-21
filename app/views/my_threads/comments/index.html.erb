@@ -11,8 +11,10 @@
     <% @comments.each do |comment| %>
       <tr>
         <td><%= comment.body %></td>
+        <% if comment.user_id==@current_user_id %>
         <td><%= link_to 'Edit', edit_my_thread_comment_path(my_thread_id: @my_thread, id: comment) %></td>
         <td><%= link_to 'Destroy', my_thread_comment_path(my_thread_id: @my_thread, id: comment), method: :delete %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
